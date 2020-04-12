@@ -1,12 +1,16 @@
 package com.meetAt.api
 
-import com.meetAt.api.controllers.SessionController
-import io.ktor.routing.Routing
-import io.ktor.routing.get
-import io.ktor.routing.route
+import com.meetAt.api.controller.SessionController
+import io.ktor.routing.*
 
 fun Routing.session(sessionController: SessionController) {
     route("get") {
         get { sessionController.get(this.context) }
+    }
+    route("create") {
+        post { sessionController.create(this.context) }
+    }
+    route("destroy") {
+        delete { sessionController.destroy(this.context) }
     }
 }

@@ -1,6 +1,6 @@
 package com.meetAt.config
 
-import com.meetAt.api.controllers.SessionController
+import com.meetAt.api.controller.SessionController
 import com.meetAt.api.session
 import io.ktor.application.Application
 import io.ktor.application.install
