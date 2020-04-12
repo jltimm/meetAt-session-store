@@ -1,6 +1,6 @@
 package com.meetAt.config
 
-import com.meetAt.api.controllers.SessionController
+import com.meetAt.api.controller.SessionController
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.singleton
