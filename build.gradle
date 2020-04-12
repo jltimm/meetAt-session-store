@@ -1,4 +1,8 @@
 buildscript {
+    ext {
+        kodein_version = "6.1.0"
+        unirest_version = "1.4.9"
+    }
     repositories {
         jcenter()
     }
@@ -35,5 +39,8 @@ dependencies {
     implementation "io.ktor:ktor-server-core:$ktor_version"
     implementation "io.ktor:ktor-client-core:$ktor_version"
     implementation "io.ktor:ktor-client-core-jvm:$ktor_version"
+    implementation "org.kodein.di:kodein-di-generic-jvm:$kodein_version"
+    api "io.ktor:ktor-jackson:$ktor_version"
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
+    testCompile "com.mashape.unirest:unirest-java:$unirest_version"
 }
